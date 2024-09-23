@@ -1,5 +1,6 @@
 # Axell_AI_2024
-SIGNATEで開催されたAxell AI Contest 2024(https://signate.jp/competitions/1374)の29位獲得解法（グループに参加において最高スコアを獲得した自身の提出コード）
+SIGNATEで開催されたAxell AI Contest 2024(https://signate.jp/competitions/1374)
+の29位獲得解法（グループに参加において最高スコアを獲得した自身の提出コード）
 
 # コンペ概要
 このコンペは4倍超解像モデルの精度(PSNRで評価)を競うものだったが、推論時間の制限(Tesla T4で1枚あたり0.035sec以内)があった。
