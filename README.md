@@ -25,16 +25,16 @@ ESPCNの最大の特徴は、アップサンプリングの際に従来の補間
 (https://speakerdeck.com/masakiaota/kaggledeshi-yong-sarerudi-dui-xue-xi-fang-fa-awpnolun-wen-jie-shuo-toshi-zhuang-jie-shuo-adversarial-weight-perturbation-helps-robust-generalization)
 
 ## 3.訓練の方法について
-epochは100（余裕があれば、よりepochを増やすことで精度向上の余地あり）
-optimizerとしてAdamWを採用（learning rateは1e-3、weight decayは1e-3）
-schedulerとしてCosineAnnealingを採用（100epochにかけて学習率が0まで減衰するようにスケジューリング）
+1.epochは100（余裕があれば、よりepochを増やすことで精度向上の余地あり）
+2.optimizerとしてAdamWを採用（learning rateは1e-3、weight decayは1e-3）
+3.schedulerとしてCosineAnnealingを採用（100epochにかけて学習率が0まで減衰するようにスケジューリング）
 
 学習についてはepochごとに内容を分けて行った。
 学習計画は以下の通り
 
-1~60epoch：DA
-61~80epoch：DAなし
-81~100epoch：DAなし+AWP
+1. 1~60epoch：DA
+2. 61~80epoch：DAなし
+3. 81~100epoch：DAなし+AWP
 
 前半からAWPを入れてしまうと学習が十分に進まなかったり、すべての学習にたいしてDAの画像だと元画像に対する学習を行えなかったりするので、以上のように設定した。
 
